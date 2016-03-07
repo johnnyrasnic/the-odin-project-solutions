@@ -1,0 +1,186 @@
+body {
+font-family: arial, sans-serif;
+}
+
+#topbar {
+	height: 60px;
+
+	border-color: #bdbdbd;
+	background-color: #ededed;
+}
+
+#topbar ul {
+	float: right;
+	vertical-align: middle;
+}
+
+#topbar li {
+	display: inline;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+
+#logo {
+	width: 90px;
+	height: 30px;
+	margin-left: 10px;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+#searchbar {
+	width: 600px;
+	height: 30px;
+	border: 1px solid #d9d9d9;
+	margin-top: 10px;
+	font-size: 20px;
+	text-indent: 10px;
+}
+
+#searchbar:hover {
+	border: 1px solid #bfbfbf;
+}
+
+#searchbar:focus {
+	border: 1px solid #a1c4e8;
+}
+
+.btn-blue {
+	background-color: #328ae2;
+	border-radius: 2px;
+	padding-top: 9px;
+	padding-bottom: 6px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#apps {
+	vertical-align: middle;
+	margin-bottom: 10px;
+}
+
+#signin {
+	color: white;
+	background-color: #328ae2;
+	border-radius: 3px;
+	border-color: #3256c8;
+	height: 35px;
+	width: 70px;
+}
+
+#search-options {
+	border-bottom: 1px solid #ebebeb;
+	height: 60px;
+}
+
+.search-options-l {
+	float: left;
+	border-color: #c9c9c9;
+	vertical-align: middle;
+	padding-left: 80px;
+}
+
+
+.search-options-l a li {
+	text-decoration: none;
+	color: #616161;
+	display: inline-block;
+	margin-right: 5px;
+	font-size: 0.8em;
+	height: 30px;
+	margin-right: 15px;
+
+}
+
+.search-options-l a li:hover {
+	border-bottom: 3px solid #4285f4;
+	color: #4285f4;
+	font-weight: bold;
+}
+
+#search-tools {
+	width: 100px;
+}
+
+#option-all {
+	border-bottom: 3px solid #4285f4;
+	color: #4285f4;
+	font-weight: bold;
+}
+
+#result-info {
+	font-size: 0.8em;
+	color: #8f8f8f;
+	text-align: left;
+	margin-left: 120px;
+	margin-bottom: 20px;
+}
+
+#results {
+	clear: both;
+	margin-left: 120px;
+	width: 500px;
+}
+
+.result {
+	margin-bottom: 30px;
+}
+
+.result a {
+font-size: 1.1em;
+text-decoration: none;
+}
+
+.result a:hover {
+	text-decoration: underline;
+}
+
+.result cite {
+	color: green;
+	font-size: 0.8em;
+}
+
+.date {
+	color: #8f8f8f;
+}
+
+.result span {
+	font-size: 0.8em;
+}
+
+#footer {
+	position: relative;
+	left: 0;
+	width: 100%;
+	height: 80px;
+	margin-top: 20px;
+	padding-top: 10px;
+	background-color: #f1f1f1;
+	clear: both;
+	font-size: 0.9em;
+	color: #6b6b6b;
+}
+
+#footer	a {
+	text-decoration: none;
+	color: #6b6b6b;
+}
+
+#footer	a:hover {
+	text-decoration: underline;
+}
+
+#location {
+	color: #8f8f8f;
+	margin-left: 120px;
+}
+
+#footer ul {
+	margin-left: 120px;
+}
+
+#footer li {
+	display: inline;
+	margin-right: 15px;
+}
