@@ -1,74 +1,50 @@
 require 'csv'
 
 class Game
-  @@dictionary = './5desk.txt'
-
   def initialize
-    @words = File.readlines(@@dictionary)
-    @answer = select_word(4..12)
+    @word = select_word
     @chances = 9
-    @word = Array.new(@answer.length, '_')
-    puts "Welcome to Hangman!"
+    @hidden_word =  "_" * @word.length + "\n"
     play
   end
 
   def play
-    loop do
-      puts @word
-      guess = get_input
-      if @answer.include?(guess)
-        @secret_word.split('').each_with_index do |i, j|
-            @word[j] = i if i == guess
-          end
-      else
-        @misses << guess unless @misses.include?(guess)
-        @chances -= 1
-      end
+    check_chances
+    draw
+    get_input
+    if @word.include?(@input)
 
-      if is_complete?
-        congrats
-        break
-      end
     end
-
   end
 
-  def load(file)
-
+  def draw
+    puts "#{@chances} chances left, the word is #{@hidden_word}"
   end
 
-  def save(file)
-
+  def select_word
+    dictionary = File.readlines("5desk.txt")
+    word = dictionary.sample.to_s
   end
 
   def get_input
-    print "Your guess: "
-    input = "#{gets.chomp.downcase}"
-    if input.length != 1
-      puts "Sorry, can only accept one letter. Please try again."
+    print "Please enter one character: "
+    @input = gets.chomp
+    if @input.length != 1
+      puts "You can only input one character"
       get_input
-    else
-      puts "Your guess is: #{input}"
     end
   end
 
-  def is_complete?
-    if @word == @answer
-      return true
+  def check_chances
+    if @chances == 0
+      lose
     end
   end
 
-  def select_word(range)
-    begin
-      @answer = @words[rand(@words.length)]
-    end until range.include?(@answer.length)
+  def lose
+    puts "You lost! The word was #{word}. New game initializing"
+    initialize
   end
-
-  def congrats
-    puts
-  end
-
 end
 
 g = Game.new
-puts g.secret_word
